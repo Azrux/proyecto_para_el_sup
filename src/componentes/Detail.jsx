@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function Detail() {
-  const { id } = useParams();
-  const normId = id.toLowerCase();
+  const { data } = useParams();
+  const normId = data.toLowerCase();
   const navigate = useNavigate();
 
   function handleClick() {

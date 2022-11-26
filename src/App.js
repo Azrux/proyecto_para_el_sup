@@ -12,10 +12,14 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
-        <Route exact path="/about/:id" element={<Detail />} />
+        <Route exact path="/about/:data" element={<Detail />} />
       </Routes>
     </div>
   );
 }
+
+//(),,()
+//(';')
+//(U-U)o
 
 export default App;

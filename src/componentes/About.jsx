@@ -4,7 +4,7 @@ export default function About() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/");
+    navigate('/');
   }
 
   return (

@@ -4,13 +4,13 @@ export default function Cronometro() {
   const [segundos, setSegundos] = useState(0);
 
   useEffect(() => {
-    if (segundos === 5) {
+    if (segundos === 15) {
       return;
     }
     setTimeout(() => {
       setSegundos(segundos + 1);
-    }, 1000);
-  });
+    }, 1000); //milisegundos
+  }); 
 
   return (
     <>
