@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Contador() {
   
   const [contador, setContador] = useState(0);
-
-  // useEffect(() => {
-  //   console.log(contador);
-  // }, [contador]);
 
   function handleDown() {
     if (contador > 0) {

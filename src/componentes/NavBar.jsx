@@ -13,6 +13,9 @@ export default function NavBar() {
       <Link to='/about'>
         <p>About</p>
       </Link>
+      <Link to='/countries'>
+        <p>Países</p>
+      </Link>
     </div>
   )
 }
