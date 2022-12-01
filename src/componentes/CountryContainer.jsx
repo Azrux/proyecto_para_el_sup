@@ -4,8 +4,8 @@ import { getAllCountries } from "../redux/actions";
 
 export default function CountryContainer() {
 
-  const countries = useSelector(state => state.countries);
-  const dispatch = useDispatch();
+  const countries = useSelector(state => state.countries); //Para poder utilizar un estado del reducer
+  const dispatch = useDispatch(); //mapDispatchToProps
 
   useEffect(() => {
     if(countries.length === 0) {
@@ -15,10 +15,11 @@ export default function CountryContainer() {
 
   return(
     <div>
-      {countries?.length > 0 && countries.map(c => {
-        return(<>
-          <p>{c.name.common} {c.flag}</p>
-        </>)
+      {countries?.length > 0 && countries.map((c, i) => {
+        return(
+        <div key={i}>
+          <p >{c.name.common} {c.flag}</p>
+        </div>)
       })}
     </div>
   )
