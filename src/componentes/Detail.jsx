@@ -1,27 +1,26 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function Detail() {
-  const {id} = useParams()
-  const normId = id.toLowerCase()
-  const navigate = useNavigate()
+  const { data } = useParams();
+  const normId = data.toLowerCase();
+  const navigate = useNavigate();
 
   function handleClick() {
-    navigate('/')
+    navigate("/");
   }
 
   return (
     <div>
-      {
-        normId === 'will' || normId === 'lau' ? (
-        <>
-          Hola, soy {normId.charAt(0).toUpperCase() + normId.slice(1)}!
-        </>
-        ) : (
+      {normId === "will" || normId === "lau" ? (
+        <>Hola, soy {normId.charAt(0).toUpperCase() + normId.slice(1)}!</>
+      ) : (
         <>
           <p>Detalle no disponible</p>
-        </>)
-      }
-      <button onClick={handleClick}>Home</button>
+        </>
+      )}
+      <p>
+        <button onClick={handleClick}>Home</button>
+      </p>
     </div>
   );
 }
