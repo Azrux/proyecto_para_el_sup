@@ -1,34 +1,24 @@
-import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default async function Copas() {
-  const results = [];
+export default function Copas() {
+	const [copas, setCopas] = useState(0);
 
-  useEffect(() => {
-   async function fetchData() {
-    axios.get("https://restcountries.com/v3/all")
-    .then(res => {
-      res.data.map(r => {
-        return results.push(r)
-      })
-    })
-   }
-   fetchData()
-   console.log(results)
-  }, []);
+	useEffect(() => {
+		console.log("usando useEffect!");
+		const interval = setInterval(() => {
+			console.log("seteando mis copas");
+			setCopas((copas) => copas + 1);
+		}, 1200);
 
+		return () => {
+			clearInterval(interval);
+		};
+	}, [copas]);
 
-    return (
-      <div>
-        {results.length > 0 ? results.map((r) => {
-          return (
-            <div>
-              <p>hola</p>
-              <p>{r.flag}</p>
-              <p>{r.name.common}</p>
-            </div>
-          );
-        }) : (<p>No se encontró data</p>)}
-      </div>
-    );  
+	return (
+		<div>
+			<p>contemos las copas:</p>
+			<h5>{copas} copas</h5>
+		</div>
+	);
 }
