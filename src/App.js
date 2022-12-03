@@ -7,17 +7,17 @@ import Detail from "./componentes/Detail";
 import CountryContainer from "./componentes/CountryContainer";
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/about/:data" element={<Detail />} />
-        <Route exact path="/countries" element={<CountryContainer />} />
-      </Routes>
-    </div>
-  );
+	return (
+		<div className="App">
+			<NavBar />
+			<Routes>
+				<Route exact path="/" element={<Home />} />
+				<Route exact path="/about" element={<About />} />
+				<Route exact path="/about/:data" element={<Detail />} />
+				<Route exact path="/countries" element={<CountryContainer />} />
+			</Routes>
+		</div>
+	);
 }
 
 //(),,()
