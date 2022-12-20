@@ -1,0 +1,15 @@
+.background {
+    position: absolute;
+    background-image: url("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/VNUOB5TCLFGDFHMV42IEJSJZS4.jpg");
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    opacity: 0.9;
+}
+
+.cronometro {
+    display: flex;
+    justify-content: center;
+}

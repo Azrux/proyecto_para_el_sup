@@ -1,4 +1,12 @@
 .NavBar {
     display: flex;
     justify-content: space-around;
+    border-bottom: 3px solid red;
+    background-color: rgb(2, 29, 70);
+    box-shadow: 0 12px 16px 0 black;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import s from '../styles/Contador.module.css'
 
 export default function Contador() {
   
@@ -17,16 +18,17 @@ export default function Contador() {
   }
 
   return (
-    <div>
-      <h1>Cuántas copas tenés?</h1>
-      <img
+    <div className={s.container}>
+      <h1 className={s.title}>Cuántas copas tenés?</h1>
+      {/* <img
         src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/VNUOB5TCLFGDFHMV42IEJSJZS4.jpg"
         alt="imagenDeCopas"
-      />
+        className={s.img}
+      /> */}
       <div>
-        <button onClick={handleDown}>-</button>
+        <button onClick={handleDown} className={s.button} >-</button>
         <label name="name">Tenés {contador} copas</label>
-        <button onClick={handleUp}>+</button>
+        <button onClick={handleUp} className={s.button} >+</button>
       </div>
     </div>
   );

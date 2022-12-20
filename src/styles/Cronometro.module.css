@@ -1,0 +1,8 @@
+.p {
+    position: relative;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.39);
+    border: black 5px solid;
+    border-radius: 35px;
+    padding: 20px;
+}

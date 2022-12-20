@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.39);
+    border: black 5px solid;
+    border-radius: 35px;
+    padding: 20px;
+    margin-left: 25vh;
+    margin-right: 25vh;
+}
+
+.button {
+    background-color: white;
+    border-radius: 7px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.89), 0 17px 50px 0 rgba(10, 0, 0, 0.966);
+}
+
+.button:active {
+    background-color: rgb(24, 168, 212);
+}
